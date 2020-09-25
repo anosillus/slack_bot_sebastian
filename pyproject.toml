@@ -1,0 +1,47 @@
+[tool]
+[tool.poetry]
+name = "sebastian"
+version = "0.1.0"
+homepage = "https://github.com/anosillus/sebastian"
+description = "Top-level package for sebastian."
+authors = ["anosillus <anosillus@gmail.com>"]
+readme = "README.rst"
+license =  "MIT"
+classifiers=[
+    'Development Status :: 2 - Pre-Alpha',
+    'Intended Audience :: Developers',
+    'License :: OSI Approved :: MIT License',
+    'Natural Language :: English',
+    'Programming Language :: Python :: 3.7',
+    'Programming Language :: Python :: 3.8',
+]
+packages = [
+    { include = "sebastian" },
+    { include = "tests", format = "sdist" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+click = "*"
+slack_bolt = "^0.6.0-alpha.0"
+pytest = "^6.0.2"
+python-dotenv = "^0.14.0"
+
+[tool.poetry.dev-dependencies]
+bumpversion = "*"
+coverage = "*"
+flake8 = "*"
+invoke = "*"
+isort = "*"
+pylint = "*"
+pytest = "*"
+sphinx = "*"
+tox = "*"
+yapf = "*"
+
+[tool.poetry.scripts]
+sebastian = 'sebastian.cli:main'
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

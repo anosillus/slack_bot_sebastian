@@ -1,0 +1,18 @@
+runtime: python38
+
+instance_class: F1
+
+inbound_services:
+  - warmup
+
+automatic_scaling:
+  min_idle_instances: 1
+  max_instances: 1
+
+handlers:
+  - url: /slack/events
+    secure: always
+    script: auto
+
+includes:
+  - env_variables.yaml
