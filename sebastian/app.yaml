@@ -1,6 +1,6 @@
 runtime: python38
 
-instance_class: F1
+instance_class: F4_1G
 
 inbound_services:
   - warmup
